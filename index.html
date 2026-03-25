@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phương Anh | Chuyên viên Marketing</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --pink: #ff4d8d;
+        --purple: #7b61ff;
+        --blue: #4da6ff;
+        --bg: #ffffff;
+        --text: #111;
+        --card: #ffffff;
+      }
+
+      /* DARK MODE */
+      body.dark {
+        --bg: #0f172a;
+        --text: #e5e7eb;
+        --card: #1e293b;
+
+        background:
+          linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)),
+          url("https://images.unsplash.com/photo-1549692520-acc6669e2f0c");
+      }
+
+      /* BODY + BACKGROUND NHẬT */
+      body {
+        font-family: "Roboto", sans-serif;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.9)),
+          url("https://images.unsplash.com/photo-1549692520-acc6669e2f0c");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: var(--text);
+        margin: 0;
+        transition: 0.3s;
+      }
+
+      /* NAVBAR */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+      }
+
+      .toggle {
+        cursor: pointer;
+        padding: 6px 12px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, var(--pink), var(--purple));
+        color: white;
+      }
+
+      /* CONTAINER */
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 30px;
+      }
+
+      /* HERO */
+      .hero {
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        gap: 40px;
+        /* align-items: center; */
+      }
+
+      .avatar {
+        width: 260px;
+        height: 330px;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 3px solid transparent;
+        background:
+          linear-gradient(white, white) padding-box,
+          linear-gradient(135deg, var(--pink), var(--blue)) border-box;
+      }
+
+      .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* CRAB ICON */
+      .crab {
+        font-size: 24px;
+        margin-left: 10px;
+      }
+
+      h1 {
+        font-size: 3rem;
+        background: linear-gradient(90deg, var(--pink), var(--purple));
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .tag {
+        background: linear-gradient(90deg, var(--pink), var(--purple));
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        margin-right: 5px;
+        font-size: 0.8rem;
+      }
+
+      .section {
+        margin-top: 60px;
+      }
+
+      .card {
+        background: var(--card);
+        padding: 25px;
+        border-radius: 15px;
+        margin-top: 20px;
+        backdrop-filter: blur(6px);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background: linear-gradient(90deg, var(--pink), var(--purple));
+        color: white;
+        border-radius: 30px;
+        text-decoration: none;
+      }
+
+      /* SKILL */
+      .skill {
+        margin-top: 10px;
+      }
+      .bar {
+        height: 8px;
+        background: #eee;
+        border-radius: 10px;
+      }
+      .fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--pink), var(--blue));
+      }
+
+      /* PROJECT IMAGE */
+      .project-img {
+        width: 100%;
+        border-radius: 12px;
+        background: #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #666;
+        margin-bottom: 15px;
+        overflow: hidden;
+      }
+
+      .project-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div>🌸 Phương Anh | Xôi cua 🦀</div>
+      <div class="toggle" onclick="toggleDark()">🌙</div>
+    </div>
+
+    <div class="container">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="avatar">
+          <img src="https://iili.io/qicWjmg.jpg" alt="avatar" />
+        </div>
+
+        <div>
+          <h1>Phương Anh <span class="crab">🦀</span></h1>
+          <span class="tag">Chuyên viên Marketing</span>
+          <span class="tag">KOC</span>
+          <span class="tag">Edura Teacher</span>
+
+          <p>
+            Sinh viên năm 4 – Tiếng Nhật Thương mại FTU. Định hướng phát triển
+            trong lĩnh vực marketing số, kết hợp ngôn ngữ và công nghệ.
+          </p>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <div class="section">
+        <h2>🧭 Giới thiệu</h2>
+        <div class="card">
+          <p>
+            Mình là sinh viên năm 4 chuyên ngành Tiếng Nhật Thương mại tại FTU.
+            Hiện đang là KOC và giáo viên livestream tại Edura. Quan tâm đến sự
+            kết hợp giữa <b>ngôn ngữ – marketing – công nghệ</b>
+            và phát triển nội dung giáo dục trên nền tảng số.
+          </p>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="section">
+        <h2>🔧 Kỹ năng</h2>
+
+        <div class="card">
+          <p><b>Content & Marketing</b></p>
+
+          <div class="skill">
+            <p>Content TikTok</p>
+            <div class="bar"><div class="fill" style="width: 90%"></div></div>
+          </div>
+
+          <div class="skill">
+            <p>Digital Ads</p>
+            <div class="bar"><div class="fill" style="width: 80%"></div></div>
+          </div>
+
+          <div class="skill">
+            <p>Livestream Engagement</p>
+            <div class="bar"><div class="fill" style="width: 85%"></div></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <p><b>Ngoại ngữ</b></p>
+          <ul>
+            <li>🇯🇵 JLPT N2</li>
+            <li>🇨🇳 HSK3</li>
+            <li>🇬🇧 English (basic)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="section">
+        <h2>💼 Kinh nghiệm</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>📱 KOC TikTok</h3>
+            <p>Sáng tạo nội dung, bắt trend và xây dựng thương hiệu cá nhân.</p>
+          </div>
+
+          <div class="card">
+            <h3>🎤 Livestream Edura</h3>
+            <p>Giảng dạy tiếng Nhật và tối ưu trải nghiệm học viên.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT -->
+      <div class="section">
+        <h2>📊 Dự án Marketing</h2>
+
+        <div class="card">
+          <img
+            class="project-img"
+            src="https://iili.io/qsHPCOv.png"
+            alt="Ảnh dự án"
+          />
+          <h3>Kênh TikTok “Học JLPT cùng Edura”</h3>
+          <p>
+            Kênh do chính mình xây dựng, tập trung vào nội dung luyện thi JLPT
+            và phát triển cộng đồng người học tiếng Nhật.
+          </p>
+          <ul>
+            <li>Xây dựng chiến lược nội dung</li>
+            <li>Tối ưu thuật toán TikTok</li>
+            <li>Tăng trưởng người theo dõi & tương tác</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <img
+            class="project-img"
+            src="https://iili.io/qsHPCOv.png"
+            alt="Ảnh dự án"
+          />
+          <h3>Kênh “Học Kaiwa thật dễ”</h3>
+          <p>
+            Phát triển nội dung hội thoại tiếng Nhật dễ hiểu cho người mới học.
+          </p>
+          <ul>
+            <li>Thiết kế format video</li>
+            <li>Tăng retention</li>
+            <li>Tối ưu chuyển đổi học viên</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="section">
+        <h2>📫 Liên hệ</h2>
+        <div class="card">
+          <p>Email: k61.2211740014@ftu.edu.vn</p>
+          <p>Phone: 0917363192</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleDark() {
+        document.body.classList.toggle("dark");
+      }
+    </script>
+  </body>
+</html>
